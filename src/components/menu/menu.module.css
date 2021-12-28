@@ -1,0 +1,9 @@
+.menu{
+    visibility: hidden;
+    width: 100vw;
+    height: 0vh;
+    background-color: #e3f2fd;
+    opacity: 0.8;
+    z-index: 2;
+    transition: all 0.3s;
+}
