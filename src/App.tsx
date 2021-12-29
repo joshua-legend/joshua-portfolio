@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Navbar from "./components/navbar/navbar";
-import Home from "./components/home/home";
+import Pagewrap from "./components/pagewrap/pagewrap";
+import Menu from "./components/menu/menu";
 
 function App() {
-  return (
+
+    const [menu, setMenu] = useState(false);
+
+    return (
     <div className="App">
-      <Navbar />
-        {/*<Home/>*/}
+        <Pagewrap isOpenMenu={menu}  />
+        {/*<Menu IsOpenMenu={menu}/>*/}
     </div>
-  );
+    );
 }
 
 export default App;
