@@ -4,6 +4,7 @@ import Navbar from "../navbar/navbar";
 
 interface Iprops{
     isOpenMenu : boolean
+    changeMenu : (event: React.MouseEvent<HTMLElement>) => void
 }
 
 const Pagewrap = (props:Iprops) => {
@@ -12,7 +13,7 @@ const Pagewrap = (props:Iprops) => {
 
     return (
         <div className={styles.pagewrap} ref={pageRef}>
-            <Navbar isOpenMenu={props.isOpenMenu}  />
+            <Navbar isOpenMenu={props.isOpenMenu} changeMenu={props.changeMenu} />
         </div>
     );
 };

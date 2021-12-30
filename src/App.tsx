@@ -6,11 +6,13 @@ import Menu from "./components/menu/menu";
 function App() {
 
     const [menu, setMenu] = useState(false);
+    const changeMenu:(event: React.MouseEvent<HTMLElement>) => void = () =>{setMenu(!menu)}
+
 
     return (
     <div className="App">
-        <Pagewrap isOpenMenu={menu}  />
-        {/*<Menu IsOpenMenu={menu}/>*/}
+        <Pagewrap isOpenMenu={menu} changeMenu={changeMenu} />
+        {/*<Menu isOpenMenu={menu} changeMenu={changeMenu}/>*/}
     </div>
     );
 }

@@ -3,7 +3,8 @@ import styles from './menu.module.css'
 import Navbar from "../navbar/navbar";
 
 interface Iprops{
-    IsOpenMenu : boolean
+    isOpenMenu : boolean
+    changeMenu : (event: React.MouseEvent<HTMLElement>) => void
 }
 
 const Menu = (props:Iprops) => {
@@ -18,7 +19,7 @@ const Menu = (props:Iprops) => {
 
     return (
         <div className={styles.menu} ref={myRef}>
-            {/*<Navbar  />*/}
+            {/*<Navbar isOpenMenu={props.isOpenMenu} changeMenu={props.changeMenu} />*/}
         </div>
     );
 };
