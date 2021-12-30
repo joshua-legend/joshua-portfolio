@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 .menu{
-    display: none;
+    display: flex;
+    flex-direction: column;
     visibility: hidden;
+    background-color: #e6ffff;
     width: calc(100vw - 40px);
-    height: calc(100vh - 40px);
+    height: 0;
     margin: 20px;
-    background-color: aquamarine;
     opacity: 0.8;
     z-index: 2;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 }
-
+.line{ width:20%; height:10px; background:#ff8282;}
+.selectArea{margin: 0px 3rem;height: 100%}
+.icons{display: flex;flex-direction: row;font-size: xxx-large;align-items: center;text-align: center;cursor: pointer;}
+.icon{width: 15%;}
+.icon:hover{transition: all 0.2s linear; color: #ff8282; transform: rotate(30deg);}
+.article{display: flex;align-items: center;justify-content: flex-start;height: 20%}
+.title{flex:2;font-size: xxx-large;font-weight: bolder;color: gray;font-family: 'Oswald', sans-serif;cursor: pointer}
+.title:hover{transition: all 0.2s linear; color: #ff8282;}
+.description{flex:4;font-size: larger;color: gray;}

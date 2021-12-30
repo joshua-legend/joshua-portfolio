@@ -1,4 +1,4 @@
-import React, {createRef} from 'react';
+import React, {createRef, MutableRefObject, useRef} from 'react';
 import styles from './pagewrap.module.css'
 import Navbar from "../navbar/navbar";
 
@@ -9,7 +9,7 @@ interface Iprops{
 
 const Pagewrap = (props:Iprops) => {
 
-    const pageRef = createRef<HTMLDivElement>()
+    const pageRef = useRef<HTMLDivElement>(null)
 
     return (
         <div className={styles.pagewrap} ref={pageRef}>

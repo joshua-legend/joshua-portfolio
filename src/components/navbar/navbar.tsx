@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './navbar.module.css'
+import {useEffect, useRef} from "react";
 
 interface Iprops{
     isOpenMenu : boolean
@@ -8,11 +9,15 @@ interface Iprops{
 
 const Navbar = (props:Iprops) => {
 
+    const navbarRef = useRef<HTMLDivElement>(null);
     const {isOpenMenu,changeMenu} = props;
+    useEffect(() => {
+        if(isOpenMenu){(navbarRef.current as HTMLElement).style.position = "inherit";}
+    }, []);
 
     return (
         <>
-            <div className={styles.navbar} onClick={changeMenu}>
+            <div className={styles.navbar} onClick={changeMenu} ref={navbarRef}>
                 <div className={styles.menu} >
                     <svg className={styles.cube} width="108" height="79" viewBox="0 0 108 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path className={styles.cube_color} d="M42 58.43L74.58 77.24L107.16 58.43V20.81L74.58 2L42 20.81V58.43Z" fill="#66BFE6"/>
