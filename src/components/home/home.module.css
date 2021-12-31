@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-.home{
-    display: flex;
-    flex-direction: row;
-    height: 900px;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Anton', sans-serif;
-}
+.home{display: flex;flex-direction: row;height: 900px;align-items: center;justify-content: center;font-family: 'Anton', sans-serif;}
 .introduce{width: 30%;}
 .name{font-size: 4rem;}
 .description{font-size: 2.5rem;}
