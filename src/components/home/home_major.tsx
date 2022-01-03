@@ -1,22 +1,23 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import styles from './home.module.css'
 import {AiOutlineStar, FaBirthdayCake} from "react-icons/all";
 
 interface Iprops {
-    id:number,
+    id:string,
     h1:string,
     tags:string[],
     p:string,
     img:string,
-    reverse:boolean
+    bg:string
 }
 const Home_major = (props:Iprops) => {
-    const a = (event: any) =>{
-
+    const a = (e:any) =>{
+        const div = (e.nativeEvent.path[3] as HTMLDivElement);
+        console.log(div.getBoundingClientRect());
     }
 
     return (
-          <div className={styles.major} onLoad={a}>
+          <div id={props.id} className={styles.major} onLoad={a}>
               <section className={styles.introduce}>
                   <h1 className={styles.h1}>{props.h1}</h1>
                   <hr className={styles.hr}/>
