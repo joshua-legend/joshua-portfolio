@@ -4,20 +4,21 @@ import {AiOutlineStar, FaBirthdayCake} from "react-icons/all";
 
 interface Iprops {
     id:string,
+    // findPageY:any,
     h1:string,
     tags:string[],
     p:string,
     img:string,
-    bg:string
+    info:any
 }
 const Home_major = (props:Iprops) => {
-    const a = (e:any) =>{
-        const div = (e.nativeEvent.path[3] as HTMLDivElement);
-        console.log(div.getBoundingClientRect());
+
+    const getY = (e:any) =>{
+        // props.findPageY((e.nativeEvent.path[3] as HTMLDivElement).getBoundingClientRect().y-20);
     }
 
     return (
-          <div id={props.id} className={styles.major} onLoad={a}>
+          <div id={props.id} className={styles.major} onLoad={getY}>
               <section className={styles.introduce}>
                   <h1 className={styles.h1}>{props.h1}</h1>
                   <hr className={styles.hr}/>
@@ -30,17 +31,18 @@ const Home_major = (props:Iprops) => {
                   </nav>
                   <article className={styles.profile}>
                       <img src={props.img} alt=""/>
-                      <h1>Joshua</h1>
-                      <h2>Front-end Developer</h2>
+                      <h1>{props.info.name}</h1>
+                      <h2>{props.info.sub}</h2>
                       <a className={styles.btnView} href="#">View More</a>
                   </article>
-                  {/*<ul className={styles.contact}>*/}
-                  {/*    <li>*/}
-                  {/*        <FaBirthdayCake />*/}
-                  {/*        <span>1993.04.04</span>*/}
-                  {/*    </li>*/}
-                  {/*    <li></li>*/}
-                  {/*</ul>*/}
+                  <ul className={styles.contact}>
+                      <li>
+                          <span>{props.info.first}</span>
+                      </li>
+                      <li>
+                          <span>{props.info.last}</span>
+                      </li>
+                  </ul>
               </section>
           </div>
     );

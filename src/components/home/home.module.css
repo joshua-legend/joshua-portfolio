@@ -3,17 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 *{text-decoration: none;}
-.major{display: flex;flex-direction: row;height: 700px;align-items: center;justify-content: center;font-family: 'Jua', sans-serif;padding:5px;margin-top: 100px;
+
+.scroll{display: flex;flex-direction: column;position: absolute;align-items: center;height: 300px;top: 700px;left: 700px;}
+.scroll .text{letter-spacing: 10px;margin-bottom: 3rem; animation: bounce 3s ease-in-out 3;}
+.scroll .line{border-left: 1px solid silver;height: 100%;}
+
+.major{display: flex;flex-direction: row;height: 700px;align-items: center;justify-content: center;font-family: 'Jua', sans-serif;padding:5px;margin-top: 100px;}
+.introduce{width: 30%;height: 300px;display: flex;margin: 5px;flex-direction: column;animation: 3s linear 0s infinite alternate move;}
+.h1{font-size: 3.5rem;white-space: pre-wrap; /* Keeps the content on a single line */}
+.hr{border: solid 3px #95afc0;width: 20%;margin: 20px 0 10px;}
+.tags{font-size:1.5rem;font-family: 'Nanum Pen Script', cursive;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid #95afc0; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+letter-spacing: 2px; /* Adjust as needed */
+animation: typing 2s steps(40, end), blink-caret 750ms step-end 3s;
 }
-.introduce{width: 30%;height: 300px;display: flex;margin: 5px;flex-direction: column;
-    animation: 3s linear 0s infinite alternate move;
-}
-.h1{font-size: 4.5rem;white-space: pre-wrap;flex:1}
-.hr{border: solid 3px #95afc0;width: 20%;}
-.tags{flex:1;font-size:1.5rem;font-family: 'Nanum Pen Script', cursive;}
 .p{font-size: 1.5rem;white-space: pre-wrap;flex:2}
 
-.card{width: 20%;padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin: 0 3rem;}
+.card{width: 18%;padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin: 0 3rem;}
 .menu{width: 100%;}
 .menu::after{content: "";display: block;clear: both;}
 .menu a{font-size: 20px;color:#666;}
@@ -25,6 +33,10 @@
 .profile h1{font-weight: bold; font-size: 22px;font-family: Arial; line-height: 1; color: #555;margin-bottom: 5px;}
 .profile h2{font-weight: normal; font-size: 12px; font-family: Arial; color: #bbb; margin-bottom: 30px;}
 .btnView{display: block;width: 50%;height: 32px; margin:0px auto 20px; background-color: #444; border-radius: 16px; font-weight: bold; font-size: 10px; font-family: Arial;color: #fff; line-height: 32px; text-align: center; background:linear-gradient(45deg,#F4F9FC,#66BFE6); box-shadow: 5px 10px 20px rgba(101, 101, 101, 0.5);}
+.contact{}
+.contact li{width: 100%;padding: 10px 0px; border-bottom: 1px solid #eee; text-align: center;}
+.contact li:last-child{border-bottom: none;}
+.contact li *{color: #555;font-size: 15px;text-shadow: 2px 2px 2px #ddd;}
 
 
 .minor{display: flex;flex-direction: row;align-items: center;justify-content: center;font-family: 'Jua', sans-serif;padding:5px;}
@@ -37,3 +49,22 @@
 /*    0%{transform: translateX(0%)}*/
 /*    100%{transform: translateX(-100%)}*/
 /*}*/
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%;}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #95afc0; }
+    100% {border-right: none;}
+}
