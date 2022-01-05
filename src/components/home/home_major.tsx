@@ -8,6 +8,7 @@ interface Iprops {
     h1:string,
     tags:string[],
     p:string,
+    cards:string,
     img:string,
     info:any
 }
@@ -24,25 +25,6 @@ const Home_major = (props:Iprops) => {
                   <hr className={styles.hr}/>
                   <aside className={styles.tags}>{props.tags.map(x=>`# ${x} `)}</aside>
                   <p className={styles.p}>{props.p}</p>
-              </section>
-              <section className={styles.card}>
-                  <nav className={styles.menu}>
-                      <a href="#"><AiOutlineStar /></a>
-                  </nav>
-                  <article className={styles.profile}>
-                      <img src={props.img} alt=""/>
-                      <h1>{props.info.name}</h1>
-                      <h2>{props.info.sub}</h2>
-                      <a className={styles.btnView} href="#">View More</a>
-                  </article>
-                  <ul className={styles.contact}>
-                      <li>
-                          <span>{props.info.first}</span>
-                      </li>
-                      <li>
-                          <span>{props.info.last}</span>
-                      </li>
-                  </ul>
               </section>
           </div>
     );

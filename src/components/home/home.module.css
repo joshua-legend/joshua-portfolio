@@ -2,23 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass&display=swap');
+
 *{text-decoration: none;}
 
 .scroll{display: flex;flex-direction: column;position: absolute;align-items: center;height: 300px;top: 700px;left: 700px;}
 .scroll .text{letter-spacing: 10px;margin-bottom: 3rem; animation: bounce 3s ease-in-out 3;}
 .scroll .line{border-left: 1px solid silver;height: 100%;}
 
-.major{display: flex;flex-direction: row;height: 700px;align-items: center;justify-content: center;font-family: 'Jua', sans-serif;padding:5px;margin-top: 100px;}
-.introduce{width: 30%;height: 300px;display: flex;margin: 5px;flex-direction: column;animation: 3s linear 0s infinite alternate move;}
-.h1{font-size: 3.5rem;white-space: pre-wrap; /* Keeps the content on a single line */}
-.hr{border: solid 3px #95afc0;width: 20%;margin: 20px 0 10px;}
-.tags{font-size:1.5rem;font-family: 'Nanum Pen Script', cursive;
-overflow: hidden; /* Ensures the content is not revealed until the animation */
-border-right: .15em solid #95afc0; /* The typwriter cursor */
-white-space: nowrap; /* Keeps the content on a single line */
-letter-spacing: 2px; /* Adjust as needed */
-animation: typing 2s steps(40, end), blink-caret 750ms step-end 3s;
-}
+.major{display: flex;flex-direction: row;height: 700px;align-items: center;justify-content: center;font-family: 'Overpass', sans-serif;padding:5px;margin-top: 100px;}
+.introduce{width: 30%;display: flex;margin: 5px;flex-direction: column;animation: 3s linear 0s infinite alternate move;}
+.h1{font-size: 3.5rem;white-space: pre-wrap;}
+.hr{border: solid 2px #95afc0;width: 20%;margin: 20px 0 10px;}
+.tags{font-size:1.5rem;font-family: 'Nanum Pen Script', cursive;overflow: hidden;border-right: .15em solid #95afc0;white-space: nowrap;letter-spacing: 1px;animation: typing 2s steps(40, end), blink-caret 750ms step-end 3s;}
 .p{font-size: 1.5rem;white-space: pre-wrap;flex:2}
 
 .card{width: 18%;padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin: 0 3rem;}
@@ -27,7 +24,6 @@ animation: typing 2s steps(40, end), blink-caret 750ms step-end 3s;
 .menu a{font-size: 20px;color:#666;}
 .menu a:first-child{float:right;}
 .menu a:last-child{float:left;}
-
 .profile{width: 100%;text-align: center;}
 .profile img{width: 50%; border-radius: 50%; margin-bottom: 20px; box-shadow: 5px 15px 30px rgba(173,216,230,0.8);}
 .profile h1{font-weight: bold; font-size: 22px;font-family: Arial; line-height: 1; color: #555;margin-bottom: 5px;}
@@ -37,7 +33,6 @@ animation: typing 2s steps(40, end), blink-caret 750ms step-end 3s;
 .contact li{width: 100%;padding: 10px 0px; border-bottom: 1px solid #eee; text-align: center;}
 .contact li:last-child{border-bottom: none;}
 .contact li *{color: #555;font-size: 15px;text-shadow: 2px 2px 2px #ddd;}
-
 
 .minor{display: flex;flex-direction: row;align-items: center;justify-content: center;font-family: 'Jua', sans-serif;padding:5px;}
 .minor_img{width: 50%;}
