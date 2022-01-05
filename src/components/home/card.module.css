@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&family=Merriweather:ital,wght@1,700&family=Overpass:wght@400;800&display=swap');
+
+section{width: 100%;padding: 200px 0px;}
+.inner{width: 90%; margin:0px auto;}
+.h1{font: bolder 32px/1 'Overpass', sans-serif;color: #555555;text-align: center;margin-bottom: 50px;}
+.wrap{width: 100%;display: flex;justify-content: space-evenly;}
+.article{width: 18%;padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin: 0 3rem;}
+/*.h2{font-family: 'Merriweather', serif;font-size: 42px;border-radius: 14px 14px 0px 0px;}*/
+/*.h2 > a {color:white;font-family: 'Merriweather', serif;}*/
+/*.p{font-family: 'Dongle', sans-serif;font-size: 25px;color:dimgray;background-color: #F4F9FC;position: relative;width: 100%;opacity: 0;transition: all 0.2s ease-in;}*/
+/*.article:hover > .p{opacity: 1;}*/

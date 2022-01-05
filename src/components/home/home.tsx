@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './home.module.css'
 import Intro from "./intro";
 import History from "./history";
+import Card from "./card";
 
 type cards = `person` | `place`;
 
@@ -44,6 +45,7 @@ const Home = () => {
                 />
             ))}
             <History />
+            <Card />
         </>
     );
 };
