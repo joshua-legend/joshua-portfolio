@@ -2,16 +2,16 @@
 
 
 .container{width: 80%; margin:200px auto 100px;}
-.h1{font: bolder 32px/1 'Overpass', sans-serif;color: #555555;text-align: center;}
+.h1{font: bolder 44px/1 'Overpass', sans-serif;color: #555555;text-align: center;}
 .wrap{width: 100%;display: flex;justify-content: space-evenly;flex-wrap: wrap;}
 
-.article{flex:1; padding: 70px 40px 100px;opacity: 0.6;transition: flex 1s, opacity 1s; z-index: 1; cursor: pointer;}
+.article{flex:1; padding: 70px 40px 100px;transition: flex 1s, opacity 1s; z-index: 1; cursor: pointer;}
 /*.article::before{content: ""; display: block; width: 80%; height: 95%; position: absolute; top:0px;left: -200px; opacity: 0; transition: 1s;}*/
 .article .inner{width: 100%;height: 100%; display: flex;flex-wrap: wrap;align-content: space-between; position: relative;}
 .article .inner .txt{width: 100%; transition: 0.5s;}
 .article .inner .txt h2{font: normal 2vw/1 'Overpass', sans-serif;color:#e57373;margin-bottom: 40px;padding-top: 70px;transition: 1s;}
 .article .inner .txt h2::after{content: ""; display: block;width: 40px; height: 2px; background: #e1f5fe; margin-top: 20px; transition: 1.5s;}
-.article .inner .txt p{font: 24px/1.4 'Dongle', sans-serif;color:#999;}
+.article .inner .txt p{font: 24px/1.4 'Dongle', sans-serif;color: #505050;}
 .article .inner figure{width: 100%; height: 15vh; background: #777;transform-origin: left center;box-shadow: 5px 5px 30px rgba(0,0,0,0.3);position: relative; overflow: hidden; filter: saturate(90%); transition: 1s;}
 .article .inner figure img {width: 100%; height: 100%; object-fit: cover; transform: scale(1.1);}
 

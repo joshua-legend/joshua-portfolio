@@ -3,16 +3,18 @@
 .inner{width: 90%; margin:0px auto;}
 .h1{font: bolder 32px/1 'Overpass', sans-serif;color: #555555;text-align: center;margin-bottom: 50px;}
 .wrap{width: 100%;display: flex;justify-content: space-evenly;flex-wrap: wrap;}
-.article{width: 25%; height:170px; padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin:2rem;display: flex;}
+.article{
+    transition: all 0.5s ease-in-out;
+    width: 25%; height:170px; padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin:2rem;display: flex;}
+.article:hover{
+    background-color: #FFD600;
+    transform: scale(1.1) translateY(-5px);
+}
 .card{display: flex;flex-direction: column;width: 80%;align-items: flex-start;}
-.card h2{
-    font-family: 'Overpass', sans-serif;
-}
-.card p{
-    font-family: 'Dongle', sans-serif;font-size: 24px;
-}
+.card h2{font-family: 'Overpass', sans-serif;}
+.card p{font-family: 'Dongle', sans-serif;font-size: 24px;}
 
-.card_img{width: 95px;object-fit: cover;}
+.card_img{width: 95px;object-fit: contain;}
 /*.h2{font-family: 'Merriweather', serif;font-size: 42px;border-radius: 14px 14px 0px 0px;}*/
 /*.h2 > a {color:white;font-family: 'Merriweather', serif;}*/
 /*.p{font-family: 'Dongle', sans-serif;font-size: 25px;color:dimgray;background-color: #F4F9FC;position: relative;width: 100%;opacity: 0;transition: all 0.2s ease-in;}*/

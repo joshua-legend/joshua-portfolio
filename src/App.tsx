@@ -15,7 +15,7 @@ function App() {
 
 
     return (
-    <div className="App">
+    <div className="App" >
         {!isOpenMenu &&<Pagewrap isOpenMenu={isOpenMenu} changeMenu={changeMenu} />}
         {isOpenMenu && <Menu isOpenMenu={isOpenMenu} changeMenu={changeMenu}/>}
     </div>

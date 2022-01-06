@@ -1,6 +1,5 @@
 import React, {MouseEventHandler, useState} from 'react';
 import styles from './history.module.css'
-import Intro from "./intro";
 
 const History = () => {
 
@@ -15,19 +14,19 @@ const History = () => {
             id: `2`,
             img:`bside.jpg`,
             title:`Bsidesoft Company`,
-            p: `프론트엔드 6개월간 수료`
+            p: `프론트 엔드와 QA담당을 주로 하였습니다. 프로젝트는 코로나 백신 운반 프로젝트-BoundX를 하였고, 여러가지 프로젝트를 진행한 경험이 있습니다.`
         },
         {
             id: `3`,
             img:`dreamcode.jpg`,
             title:`DreamCode online`,
-            p: `드림코드 짱짱걸`
+            p: `프론트엔드에 흥미가 많이 생겨서 Online 강의 드림코드를 수업을 듣게 되었고, 이를 바탕으로 JS-TS-REACT 까지 공부하게 되었습니다.`
         },
         {
             id: `4`,
             img:`academy.jpg`,
             title:`Bitcamp Academy`,
-            p: `비트캠프 6개월수료`
+            p: `Back-end에 기본적으로 부족했던 부분을 공부하였고 Spring boot를 통해서 MVC패턴을 이해하게 되었고 프로젝트까지 진행하였습니다.`
         },
     ]);
     return (
