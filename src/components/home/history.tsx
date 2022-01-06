@@ -24,27 +24,32 @@ const History = () => {
             p: `드림코드 짱짱걸`
         },
         {
-            id: `3`,
+            id: `4`,
             img:`academy.jpg`,
             title:`Bitcamp Academy`,
             p: `비트캠프 6개월수료`
         },
     ]);
     return (
-        <section className={styles.inner}>
+        <section className={styles.container}>
             <h1 className={styles.h1}>Programmer's History</h1>
             <div className={styles.wrap}>
                 {history.map(obj=>(
-                    <article className={styles.article} style={{backgroundImage:`url(/${obj.img})`}}>
-                        <h2 className={styles.h2}><a href="#">{obj.title}</a></h2>
-                        <p className={styles.p}>
-                            {(obj.p)}
-                        </p>
+                    <article className={styles.article}>
+                        <div className={styles.inner}>
+                            <div className={styles.txt}>
+                                <h2>{obj.title}</h2>
+                                <p >{(obj.p)}</p>
+                            </div>
+                            <figure>
+                                <img src={obj.img} alt=""/>
+                            </figure>
+                        </div>
                     </article>
                 ))}
             </div>
         </section>
     );
 };
-
+//style={{backgroundImage:`url(/${obj.img})`}}
 export default History;

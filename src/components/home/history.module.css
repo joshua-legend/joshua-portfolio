@@ -1,11 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&family=Merriweather:ital,wght@1,700&family=Overpass:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Bebas+Neue&family=Black+Han+Sans&family=Dongle&family=Merriweather:ital,wght@1,700&family=Overpass:wght@400;800&display=swap');
 
-/*section{width: 100%;padding: 200px 0px;}*/
-.inner{width: 90%; margin:0px auto;padding: 200px 0px;}
-.h1{font: bolder 32px/1 'Overpass', sans-serif;color: #555555;text-align: center;margin-bottom: 50px;}
-.wrap{width: 100%;display: flex;justify-content: space-evenly;}
-.article{width: 240px;height: 265px;background-size: cover;border-radius: 16px;}
-.h2{font-family: 'Merriweather', serif;font-size: 42px;border-radius: 14px 14px 0px 0px;}
-.h2 > a {color:white;font-family: 'Merriweather', serif;}
-.p{font-family: 'Dongle', sans-serif;font-size: 25px;color:dimgray;background-color: #F4F9FC;position: relative;width: 100%;opacity: 0;transition: all 0.2s ease-in;}
-.article:hover> .p{opacity: 1;}
+
+.container{width: 80%; margin:200px auto 100px;}
+.h1{font: bolder 32px/1 'Overpass', sans-serif;color: #555555;text-align: center;}
+.wrap{width: 100%;display: flex;justify-content: space-evenly;flex-wrap: wrap;}
+
+.article{flex:1; padding: 70px 40px 100px;opacity: 0.6;transition: flex 1s, opacity 1s; z-index: 1; cursor: pointer;}
+/*.article::before{content: ""; display: block; width: 80%; height: 95%; position: absolute; top:0px;left: -200px; opacity: 0; transition: 1s;}*/
+.article .inner{width: 100%;height: 100%; display: flex;flex-wrap: wrap;align-content: space-between; position: relative;}
+.article .inner .txt{width: 100%; transition: 0.5s;}
+.article .inner .txt h2{font: normal 2vw/1 'Overpass', sans-serif;color:#e57373;margin-bottom: 40px;padding-top: 70px;transition: 1s;}
+.article .inner .txt h2::after{content: ""; display: block;width: 40px; height: 2px; background: #e1f5fe; margin-top: 20px; transition: 1.5s;}
+.article .inner .txt p{font: 24px/1.4 'Dongle', sans-serif;color:#999;}
+.article .inner figure{width: 100%; height: 15vh; background: #777;transform-origin: left center;box-shadow: 5px 5px 30px rgba(0,0,0,0.3);position: relative; overflow: hidden; filter: saturate(90%); transition: 1s;}
+.article .inner figure img {width: 100%; height: 100%; object-fit: cover; transform: scale(1.1);}
+
+.article:hover {flex:1.5;opacity: 1;z-index: 2;}
+/*.article:hover::before{left: 0px;opacity: 1;}*/
+.article:hover .inner .txt{width: 75%;}
+.article:hover .inner .txt h2 {font-size: 5vw;padding-top: 0px;}
+.article:hover .inner .txt h2::after {width: 120px;background: #006db3;}
+.article:hover .inner figure{height: 25vh; filter: saturate(90%); transform: translateY(3vh);}
+
