@@ -1,12 +1,7 @@
 import React, {useState} from 'react';
-import styles from './home.module.css'
-import Intro from "./intro";
-import History from "./history";
-import Card from "./card";
 
-type cards = `person` | `place`;
 
-const Home = () => {
+const Portfolios = () => {
     const [intro, setIntro] = useState([
         {
             id: "0",
@@ -26,25 +21,9 @@ const Home = () => {
     ]);
     return (
         <>
-            <span className={styles.scroll}>
-                <span className={styles.text}>Scroll</span>
-                <div className={styles.line}></div>
-            </span>
-            {intro.map(obj=>(
-                <Intro
-                    id={obj.id}
-                    h1={obj.h1}
-                    tags={obj.tags}
-                    p={obj.p}
-                    cards={obj.cards}
-                    img={obj.img}
-                    info={obj.info}
-                />
-            ))}
-            <History />
-            <Card />
+            <div>1l2j3lk12jlk321jkl313lj12lk3jl1k23</div>
         </>
     );
 };
 
-export default Home;
+export default Portfolios;

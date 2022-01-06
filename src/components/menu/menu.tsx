@@ -2,6 +2,7 @@ import React, {createRef, useEffect, useRef} from 'react';
 import styles from './menu.module.css'
 import Navbar from "../navbar/navbar";
 import {AiFillGithub, AiFillYoutube, BiRocket, SiGmail} from "react-icons/all";
+import {Link} from "react-router-dom";
 
 interface Iprops{
     isOpenMenu : boolean
@@ -27,9 +28,9 @@ const Menu = (props:Iprops) => {
                     <div className={styles.icon}><BiRocket /></div>
                     <div className={styles.icon}><SiGmail /></div>
                 </div>
-                <div className={styles.article}><h1 className={styles.title}>Home</h1><p className={styles.description}>back to home page</p></div>
-                <div className={styles.article}><h1 className={styles.title}>Programming</h1><p className={styles.description}>What programming languages can you do?</p></div>
-                <div className={styles.article}><h1 className={styles.title}>Work</h1><p className={styles.description}>Where did you work?</p></div>
+                <div className={styles.article}><h1 className={styles.title}><Link to='/'>Home</Link></h1><p className={styles.description}>back to home page</p></div>
+                <div className={styles.article}><h1 className={styles.title}><Link to='/portfolios'>Portfolios</Link></h1><p className={styles.description}>What portfolios do you have?</p></div>
+                <div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Wanna play games?</p></div>
                 <div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Let's play some games!</p></div>
             </div>
         </div>
