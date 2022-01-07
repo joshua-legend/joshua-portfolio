@@ -11,7 +11,7 @@ function App() {
         {id: 4, position: `Game`, themeColor: `#fff8e1`,menuColor:`#ffe082`},
     ]);
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-    const changeMenu:(event: React.MouseEvent<HTMLElement>) => void = () =>{setIsOpenMenu(!isOpenMenu);console.log(isOpenMenu)}
+    const changeMenu:(event: React.MouseEvent<HTMLElement>) => void = () =>{setIsOpenMenu(!isOpenMenu);}
 
 
     return (

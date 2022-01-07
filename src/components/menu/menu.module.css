@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-.menu{
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-    background-color: #e6ffff;
-    width: calc(100vw - 40px);
-    height: 0;
-    margin: 20px;
-    opacity: 0.8;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-}
+a{color: inherit;}
+.menu{display: flex;flex-direction: column;visibility: hidden;background-color: #e6ffff;width: calc(100vw - 40px);height: 0;margin: 20px;opacity: 0.8;z-index: 2;transition: all 0.5s ease-in-out;overflow: hidden;}
 .line{ width:20%; height:10px; background:#ff8282;}
 .selectArea{margin: 0px 3rem;height: 100%}
 .icons{display: flex;flex-direction: row;font-size: xxx-large;align-items: center;text-align: center;cursor: pointer;}
