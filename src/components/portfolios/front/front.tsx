@@ -3,6 +3,8 @@ import styles from './front.module.css'
 
 interface Iprops{
     change : (args:string) => void
+    changeCircle: (args:boolean) => void
+    target : (args:{link:string,img:string,title:string}) => void
 }
 
 const Front = (props:Iprops) => {
@@ -13,15 +15,18 @@ const Front = (props:Iprops) => {
         {id:`3`,link:`https://lovecheat.net/`,img:`lovecheat.png`,title:`LoveCheat`,p:`이성간의 만남에서 상대방이 의심스러울 때, 그 사람에 관련해서 신상을 찾는 플랫폼입니다.`},
         {id:`4`,link:`https://www.bsidesoft.com/slabbluebasket/joshua/`,img:`marketcoco.png`,title:`Marketcoco`,p:`현지 싱가폴에서 필요한 과일들을 마켓코코 플랫폼을 통해서 구하는 사이트입니다.`},
         {id:`5`,link:`https://joshua-legend.github.io/joshua-cafe/index.html`,img:`joshua-cafes.png`,title:`Joshua cafe`,p:`간단한 미니 프로젝트로 카페를 구성하였습니다.`},
-
     ]);
 
-    const changeContent = (what:string) =>{props.change(what);}
+    const changeContent = (what:string,content:{link:string,img:string,title:string}) =>{
+        props.change(what);
+        props.target(content);
+        props.changeCircle(false);
+    }
 
     return (
         <>
-        {content.map(obj=>(
-            <div className={styles.content} >
+        {content.map((obj,idx)=>(
+            <div className={styles.content} onClick={()=>changeContent(`detail`,content[idx])}>
                 {obj.img && <img src={obj.img} alt=""/>}
                 <article className={styles.article}>
                     <h2 className={styles.title}>{obj.title}</h2>
@@ -29,7 +34,7 @@ const Front = (props:Iprops) => {
                 </article>
             </div>
         ))}
-            <div className={styles.content} >
+            <div className={styles.content} onClick={()=>changeContent(`choice`,{link:``,img:``,title:``})} >
                 <article className={styles.article}>
                     <h2 className={styles.title}>go to main</h2>
                 </article>
