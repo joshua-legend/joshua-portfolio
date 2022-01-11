@@ -4,6 +4,7 @@ import Navbar from "../navbar/navbar";
 import Home from "../home/home";
 import {Route, Routes} from "react-router-dom";
 import Portfolios from "../portfolios/portfolios";
+import Game from "../game/game";
 
 interface Iprops{
     isOpenMenu : boolean
@@ -19,9 +20,9 @@ const Pagewrap = (props:Iprops) => {
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/portfolios' element={<Portfolios />}></Route>
+                <Route path='/game' element={<Game />}></Route>
 
             </Routes>
-            {/*<Page />*/}
             {/*<Works/>*/}
         </div>
     );

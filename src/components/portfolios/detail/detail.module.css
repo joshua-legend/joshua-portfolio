@@ -7,13 +7,15 @@
 }
 
 .content:hover > .title{color: lightcyan; text-shadow: 0px 0px 10px aqua;opacity: 0.8;}
-.content > img{margin:1rem 3rem;}
+.content > img{margin:1rem 3rem; height: 40%;object-fit: contain;}
 .content:hover{background: rgba(255,255,255,0.15); transform: scale(1.05); opacity: 1;}
-.title{margin:1rem 3rem; font: 4rem 'Jua', sans-serif;}
+.title{margin:1rem; font: 2.5rem 'Jua', sans-serif;}
 .tags {font-family: 'Jua', sans-serif;display: flex; flex-direction: column; align-items: center; }
 .tags > div{display: flex; flex-wrap: wrap;justify-content: space-evenly;align-items: center;}
+.tags > h3{color:#ffcdd2;}
+
 .icon{width: 40px;}
-.p{margin:0 1rem;font:1.5rem 'Jua', sans-serif;}
+.p{margin:0 1rem;font:1.5rem 'Jua', sans-serif;color:#e3f2fd;}
 .exit{width: 100%;text-align: center;margin:10px;border: 1px solid rgba(255,255,255,0.5);box-sizing: border-box;background: rgba(255,255,255,0.1);overflow: hidden;cursor: pointer;transition: all 0.5s;}
 .exit > h2 {margin: 1rem; font: 1rem  'Orbitron', sans-serif;}
 .exit:hover{color: lightcyan; text-shadow: 0px 0px 10px aqua;opacity: 0.8;}

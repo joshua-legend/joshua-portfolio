@@ -3,15 +3,17 @@ import styles from './portfolios.module.css'
 import Choice from "./choice";
 import Front from "./front/front";
 import Detail from "./detail/detail";
+import Back from "./back/back";
+import Android from "./android/android";
 
 
 const Portfolios = () => {
 
     const [openSection, setOpenSection] = useState(`choice`);
-    const [detailTarget, setTarget] = useState({link:``,img:``,title:``,tags:[``],p:``});
+    const [detailTarget, setTarget] = useState({link:``,img:``,title:``,tags:[``],p:``,where:``});
 
     const onChange = (what:string) =>{setOpenSection(what);}
-    const onTarget = (what:{link:string,img:string,title:string,tags:string[],p:string})=>{setTarget(what);}
+    const onTarget = (what:{link:string,img:string,title:string,tags:string[],p:string,where:string})=>{setTarget(what);}
 
     return (
         <>
@@ -22,10 +24,9 @@ const Portfolios = () => {
                         <div className={styles.inner}>
                             {openSection ==`choice`&& <Choice change={onChange} /> }
                             {openSection ==`front` && <Front change={onChange} target={onTarget}/>}
+                            {openSection ==`back` && <Back change={onChange} target={onTarget}/>}
+                            {openSection ==`android` && <Android change={onChange} target={onTarget}/>}
                             {openSection ==`detail`  && <Detail change={onChange} content={detailTarget} />}
-                            {/*{openSection ==`front` && <Front change={onchange}/>}*/}
-                            {/*{openSection ==`front` && <Front change={onchange}/>}*/}
-
                         </div>
                     </article>
                 </section>

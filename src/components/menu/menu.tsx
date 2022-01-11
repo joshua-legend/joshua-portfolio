@@ -36,8 +36,8 @@ const Menu = (props:Iprops) => {
                 </div>
                 <div className={styles.article}><h1 className={styles.title}><Link to='/' onClick={closeMenu}>Home</Link></h1><p className={styles.description}>back to home page</p></div>
                 <div className={styles.article}><h1 className={styles.title}><Link to='/portfolios' onClick={closeMenu}>Portfolios</Link></h1><p className={styles.description}>What portfolios do you have?</p></div>
-                <div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Wanna play games?</p></div>
-                <div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Let's play some games!</p></div>
+                <div className={styles.article}><h1 className={styles.title}><Link to='/game' onClick={closeMenu}>Game</Link></h1><p className={styles.description}>Wanna play games?</p></div>
+                {/*<div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Let's play some games!</p></div>*/}
             </div>
         </div>
     );

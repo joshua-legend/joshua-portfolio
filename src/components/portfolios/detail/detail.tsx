@@ -4,18 +4,18 @@ import * as All from "react-icons/all";
 
 interface Iprops{
     change : (args:string) => void
-    content : { link:string, img:string, title:string, tags:Array<string>, p:string }
+    content : { link:string, img:string, title:string, tags:Array<string>, p:string, where:string }
 }
 
 const Detail = (props:Iprops) => {
 
-    const changeContent = (what:string) =>{
-        props.change(what);
-    }
+    const changeContent = (what:string) =>{props.change(what);}
+    const gotoURL = (url:string) =>{window.open(url);}
+
 
     return (
         <>
-            <div className={styles.content} >
+            <div className={styles.content} onClick={()=>gotoURL(props.content.link)} >
                 <img src={props.content.img} alt=""/>
                 <h2 className={styles.title}>{props.content.title}</h2>
                 <p className={styles.p}>{props.content.p}</p>
@@ -28,7 +28,7 @@ const Detail = (props:Iprops) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.exit} onClick={()=>changeContent(`choice`)} >
+            <div className={styles.exit} onClick={()=>changeContent(props.content.where)} >
                 <h2>go to main</h2>
             </div>
         </>
