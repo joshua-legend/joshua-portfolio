@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./game.module.css";
-import Leftline from "./lines/leftline";
+import Fields from "./fields/fields";
 
 const Game = () => {
     return (
         <>
             <main className={styles.wrap}>
                 {/*<UtilityBar />*/}
-                <Leftline />
+                <Fields />
                 {/*<Dino />*/}
 
             </main>
