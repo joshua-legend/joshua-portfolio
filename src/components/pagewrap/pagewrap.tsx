@@ -21,9 +21,7 @@ const Pagewrap = (props:Iprops) => {
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/portfolios' element={<Portfolios />}></Route>
                 <Route path='/game' element={<Game />}></Route>
-
             </Routes>
-            {/*<Works/>*/}
         </div>
     );
 };

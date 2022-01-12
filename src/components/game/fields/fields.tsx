@@ -17,7 +17,6 @@ const Fields = () => {
         canvas.style.objectFit = "cover";
         const ctx = canvas.getContext(`2d`) as CanvasRenderingContext2D;
 
-        let direction = true;
         document.addEventListener('keydown',function (e) {
             if(e.code=='Space'){
                 direction = !direction;
@@ -26,13 +25,13 @@ const Fields = () => {
         function collaspe(hero:Hero,enemy:Enemy) {
             return enemy.x - (hero.x + hero.w);
         }
-
-
         const hero = new Hero(fieldWidth/2,fieldHeight-200);
         const enemies = new Array();
         const enemies1 = new Array();
-
         let timer = 0;
+
+        let turn = true;
+        let direction = true;
 
         function frame() {
             requestAnimationFrame(frame);
@@ -43,6 +42,7 @@ const Fields = () => {
                 const cloud1 = new Enemy(0,fieldHeight-200)
                 enemies.push(cloud)
                 enemies1.push(cloud1)
+                turn = !turn;
             }
             enemies.forEach((enemy,idx,obj)=>{
                 if(enemy.x < 0){obj.splice(idx,1)}
@@ -60,7 +60,10 @@ const Fields = () => {
             })
 
             hero.move(direction)
-            hero.draw(ctx);
+            if((timer / 5) % 2 == 0 && direction) hero.drawRightLong(ctx);
+            // else if((timer / 5) % 2 == 0 && !direction) hero.drawLeftLong(ctx);
+            // else if((timer / 5) % 2 == 1 && direction) hero.drawRightShort(ctx);
+            else hero.drawRightShort(ctx);
         }
         frame();
     }, []);

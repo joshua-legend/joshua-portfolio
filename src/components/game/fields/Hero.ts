@@ -42,11 +42,27 @@ export class Hero {
         this._w = 5;
         this._h = 5;
     }
-    draw(ctx:CanvasRenderingContext2D){
+    drawRightLong(ctx:CanvasRenderingContext2D){
         const img = new Image()
-        img.src = 'gu.png';
+        img.src = 'rightgu_long.png';
         ctx.drawImage(img,this._x, this._y, 50, 50);
     }
+    drawRightShort(ctx:CanvasRenderingContext2D){
+        const img = new Image()
+        img.src = 'rightgu_short.png';
+        ctx.drawImage(img,this._x, this._y, 50, 50);
+    }
+    drawLeftLong(ctx:CanvasRenderingContext2D){
+        const img = new Image()
+        img.src = 'leftgu_long.png';
+        ctx.drawImage(img,this._x, this._y, 50, 50);
+    }
+    drawLeftShort(ctx:CanvasRenderingContext2D){
+        const img = new Image()
+        img.src = 'leftgu_short.png';
+        ctx.drawImage(img,this._x, this._y, 50, 50);
+    }
+
 
     move(direction:boolean){
         if(direction) this._x +=0.5;
