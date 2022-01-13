@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Hero} from "./Hero";
-import {Enemy} from "./Enemy";
+import {Hero} from "./class/Hero";
+import {Enemy} from "./class/Enemy";
+import { happy} from "./class/field"
 import * as url from "url";
 
 const Fields = () => {
@@ -17,6 +18,7 @@ const Fields = () => {
         canvas.style.objectFit = "cover";
         const ctx = canvas.getContext(`2d`) as CanvasRenderingContext2D;
 
+
         document.addEventListener('keydown',function (e) {
             if(e.code=='Space'){
                 direction = !direction;
@@ -29,7 +31,6 @@ const Fields = () => {
         const enemies = new Array();
         const enemies1 = new Array();
         let timer = 0;
-
         let turn = true;
         let direction = true;
 

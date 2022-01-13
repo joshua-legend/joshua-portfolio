@@ -9,43 +9,44 @@ interface Iprops {
 const Select = (props:Iprops) => {
 
     const figures = useRef<HTMLElement>(null);
-    const deg = 360/4;
+    const [music, setMusic] = useState([
+        {id:`1`,album:`music1.jpg`,name:`Crazy Shuffle`,hard:`어려움`},
+        {id:`2`,album:`music2.jpg`,name:`DDD`,hard:`어려움`},
+    ]);
+
+    const deg = 360/(music.length);
     let i=0;
     useEffect(() => {
         const frame = document.querySelectorAll("section") as NodeListOf<HTMLElement>;
-        Array.from(frame).forEach((ele)=>{
+        Array.from(frame).forEach((ele,num)=>{
             ele.style.transform = `rotate(${deg*i}deg) translateY(-100vh)`;
-            i++;
+            console.log(ele.style.transform);
+            console.log(num);
+            if(num != music.length-1) i++;
+
         })
     },[figures])
+
     const changeLeft = (event:any) =>{
         const frame = document.querySelectorAll("section") as NodeListOf<HTMLElement>;
-        Array.from(frame).forEach((ele)=>{
-            i--;
+        Array.from(frame).forEach((ele,num)=>{
             ele.style.transform = `rotate(${deg*i}deg) translateY(-100vh)`;
+            if(num != music.length-1) i--;
         })
     }
     const changeRight = (event:any) =>{
         const frame = document.querySelectorAll("section") as NodeListOf<HTMLElement>;
-        Array.from(frame).forEach((ele)=>{
-            i++;
+        Array.from(frame).forEach((ele,num)=>{
             ele.style.transform = `rotate(${deg*i}deg) translateY(-100vh)`;
+            if(num != music.length-1) i++;
         })
     }
-
-    const [music, setMusic] = useState([
-        {id:`1`,album:`music1.jpg`,name:`Crazy Shuffle`,hard:`어려움`},
-        {id:`2`,album:`music2.jpg`,name:`DDD`,hard:`어려움`},
-        {id:`3`,album:`music2.jpg`,name:`DDD`,hard:`어려움`},
-        {id:`4`,album:`music2.jpg`,name:`DDD`,hard:`어려움`}
-    ]);
-
 
     return (
         <>
             <figure className={styles.figure} ref={figures}>
                 <h1>
-                    <strong>DanceRush</strong><br/>
+                    <strong>ASKL Space</strong><br/>
                     <span>Dance rhythm Game</span>
                     {music.map(obj=>(
                         <Music

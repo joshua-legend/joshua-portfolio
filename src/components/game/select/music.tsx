@@ -19,9 +19,6 @@ const Music = (props:Iprops) => {
         (section.current as HTMLDivElement).style.backgroundImage = `url('${props.album}')`;
     },[section])
 
-
-
-
     return (
         <>
             <section className={styles.music}>

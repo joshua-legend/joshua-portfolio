@@ -1,36 +1,9 @@
-.gamefield{
-    display: flex; flex-direction: column;
-}
-.buttons{
-    display: flex;
-}
-
-.button {
-   background-color: #1899D6;
-   border: solid transparent;
-   border-radius: 16px;
-   border-width: 0 0 4px;
-   box-sizing: border-box;
-   color: #FFFFFF;
-   cursor: pointer;
-   display: inline-block;
-   font-family: din-round,sans-serif;
-   font-size: 15px;
-   font-weight: 700;
-   letter-spacing: .8px;
-   line-height: 20px;
-   margin: 0;
-   outline: none;
-   overflow: visible;
-   padding: 13px 16px;
-   text-align: center;
-   text-transform: uppercase;
-   touch-action: manipulation;
-   transform: translateZ(0);
-   transition: filter .2s;
-   user-select: none;
-   -webkit-user-select: none;
-   vertical-align: middle;
-   white-space: nowrap;
-   width: 100%;
-}
+.gamefield{display: flex; flex-direction: column;}
+.gamefield video {opacity: 0.4;position: absolute;width: 100%;height: 82%;object-fit: cover;}
+.buttons{display: flex;height: 60px;font: 20px/1 Orbitron;}
+.content{width: 100%;text-align: center;border: 1px solid rgba(255,255,255,0.5);box-sizing: border-box;background: rgba(255,255,255,0.1);overflow: hidden;cursor: pointer;transition: all 0.01s;display: flex;flex-direction: column;justify-content: center;}
+.content:hover{background: rgba(255,255,255,0.15); transform: scale(1.05); opacity: 1;}
+.content > p > *{font-size: 100px; transition: all 0.5s; opacity: 0.7;}
+.content h2{margin-top: 20px; letter-spacing: 2px; transition: all 0.5s;}
+.content:hover > p > *{color:lightcyan; text-shadow: 0px 0px 10px aqua; transform: scale(1.4);opacity: 1;}
+.content:hover h2 {color: lightcyan; text-shadow: 0px 0px 10px aqua;}
