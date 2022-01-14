@@ -1,6 +1,6 @@
 import React, {MouseEventHandler} from 'react';
 import styles from './intro.module.css'
-import {AiOutlineStar} from "react-icons/all";
+// import {AiOutlineStar} from "react-icons/all";
 
 interface Iprops {
     id:string,
@@ -28,7 +28,7 @@ const Intro = (props:Iprops) => {
               </section>
               <section className={styles.card}>
                   <nav className={styles.menu}>
-                      <a href="#"><AiOutlineStar /></a>
+                      <a href="#">123</a>
                   </nav>
                   <article className={styles.profile}>
                       <img src={props.img} alt=""/>

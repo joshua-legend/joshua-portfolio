@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from './chocie.module.css'
-import {AiFillAndroid, FaServer, SiGooglechrome} from "react-icons/all";
+// import {AiFillAndroid, FaServer, SiGooglechrome} from "react-icons/all";
 
 interface Iprops{
     change : (args:string) => void
@@ -13,15 +13,15 @@ const Choice = (props:Iprops) => {
     return (
         <>
             <div className={styles.content} onClick={()=>changeContent(`front`)}>
-                <p><SiGooglechrome/></p>
+                <p>123</p>
                 <h2>Front-end</h2>
             </div>
             <div className={styles.content} onClick={()=>changeContent(`back`)}>
-                <p><FaServer/></p>
+                <p>123</p>
                 <h2>Back-end</h2>
             </div>
             <div className={styles.content} onClick={()=>changeContent(`android`)}>
-                <p><AiFillAndroid/></p>
+                <p>123</p>
                 <h2>Android</h2>
             </div>
         </>

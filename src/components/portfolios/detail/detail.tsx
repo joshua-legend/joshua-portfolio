@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styles from './detail.module.css'
-import * as All from "react-icons/all";
 
 interface Iprops{
     change : (args:string) => void
