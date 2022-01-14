@@ -1,17 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styles from './select.module.css'
 import Music from "./music";
+import {CrazySuffle} from "../fields/music/CrazySuffle";
 
 interface Iprops {
     change: () => void;
+    select: (arg:any) => void;
 }
 
 const Select = (props:Iprops) => {
 
     const figures = useRef<HTMLElement>(null);
     const [music, setMusic] = useState([
-        {id:`1`,album:`music1.jpg`,name:`Crazy Shuffle`,hard:`어려움`},
-        {id:`2`,album:`music2.jpg`,name:`DDD`,hard:`어려움`},
+        {id:`1`,album:`music1.jpg`,name:`Crazy Shuffle`,difficulty:`어려움`,class:new CrazySuffle},
+        {id:`2`,album:`music2.jpg`,name:`DDD`,difficulty:`어려움`,class:undefined},
     ]);
 
     const deg = 360/(music.length);
@@ -41,7 +43,6 @@ const Select = (props:Iprops) => {
             if(num != music.length-1) i++;
         })
     }
-
     return (
         <>
             <figure className={styles.figure} ref={figures}>
@@ -52,9 +53,11 @@ const Select = (props:Iprops) => {
                         <Music
                             id={obj.id}
                             album={obj.album}
-                            hard={obj.hard}
+                            difficulty={obj.difficulty}
                             name={obj.name}
+                            class={obj.class}
                             change = {props.change}
+                            select = {props.select}
                         />
                     ))}
                     <div className={styles.btnPrev} onClick={changeLeft}><span>Prev MUSIC</span></div>

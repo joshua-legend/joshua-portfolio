@@ -6,8 +6,10 @@ interface Iprops {
     id:string,
     album:string,
     name:string,
-    hard:string,
+    difficulty:string,
+    class:any,
     change:()=>void,
+    select:(arg:any)=>void
 }
 
 
@@ -29,8 +31,9 @@ const Music = (props:Iprops) => {
                         </div>
                         <div className={styles.txt}>
                             <h2>{props.name}</h2>
-                            <li>{props.hard}</li>
-                            <button className={styles.button} onClick={props.change}>Start!</button>
+                            <li>{props.difficulty}</li>
+                            {props.class &&<button className={styles.button} onClick={()=>{props.change();props.select(props.class)}}>Start!</button>}
+                            {!props.class &&<button className={styles.button} disabled={true}>Sorry Not Ready</button>}
                         </div>
                     </div>
                 </article>

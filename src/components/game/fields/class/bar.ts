@@ -47,9 +47,10 @@ export class Bar {
         ctx.fillStyle = `#ffa2dd`;
         ctx.fillRect(this._x,this._y,this._w,this._h)
     }
-    move(){this._y += 10;}
+    move(speed:number){this._y += speed;}
+
     Ishitbar(pushkey:boolean){
-        if(pushkey && 690<this._y && this._y<700) return true;
+        if(pushkey && 700<this._y && this._y<800) return true;
         return false;
     }
 }

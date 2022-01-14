@@ -6,19 +6,18 @@ import GameField from "./fields/gamefield";
 const Game = () => {
 
     const [selected, setSelected] = useState(`not`);
-    const onChange = () => {
-        setSelected(`yes`)
-    }
+    const [music, setMusic] = useState(``);
+    const onChange = () => {setSelected(`yes`)}
 
     return (
         <>
             <main className={styles.wrap}>
-                <video src="bg.mp4" loop autoPlay muted></video>
-                {selected == `not` && <Select change={onChange}/>}
+                <video src="gamebg.mp4" loop autoPlay muted></video>
+                {selected == `not` && <Select change={onChange} select={setMusic}/>}
                 {selected == `yes` &&
                 <section className={styles.circle}>
                     <article>
-                        <GameField/>
+                        <GameField class={music}/>
                     </article>
                 </section>
                 }
