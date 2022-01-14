@@ -21,7 +21,6 @@
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
   },
-  "homepage": "http://joshua-legend.github.io/react-github-pages",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
