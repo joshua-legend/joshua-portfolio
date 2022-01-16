@@ -28,7 +28,6 @@ const Intro = (props:Iprops) => {
               </section>
               <section className={styles.card}>
                   <nav className={styles.menu}>
-                      <a href="#">123</a>
                   </nav>
                   <article className={styles.profile}>
                       <img src={props.img} alt=""/>

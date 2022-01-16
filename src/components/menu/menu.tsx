@@ -1,8 +1,10 @@
 import React, {createRef, useEffect, useRef} from 'react';
 import styles from './menu.module.css'
 import Navbar from "../navbar/navbar";
-// import {AiFillGithub, AiFillYoutube, BiRocket, SiGmail} from "react-icons/all";
 import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {faGithub, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {faEnvelope, faRocket} from "@fortawesome/free-solid-svg-icons";
 
 interface Iprops{
     isOpenMenu : boolean
@@ -11,9 +13,8 @@ interface Iprops{
 
 const Menu = (props:Iprops) => {
     const myRef = useRef<HTMLDivElement>(null)
-    const closeMenu = () =>{
-        props.isOpenMenu = !props.isOpenMenu
-    }
+    const closeMenu = () =>{props.isOpenMenu = !props.isOpenMenu}
+    const visibilityHidden = () =>{(myRef.current as HTMLElement).style.visibility = "hidden";}
 
     useEffect(() => {
         (myRef.current as HTMLElement).style.visibility = "visible";
@@ -29,15 +30,14 @@ const Menu = (props:Iprops) => {
             <div className={styles.selectArea}>
                 <div className={styles.icons}>
                     <div className={styles.line}></div>
-                    <div className={styles.icon}>123</div>
-                    <div className={styles.icon}>123</div>
-                    <div className={styles.icon}>123</div>
-                    <div className={styles.icon}>123</div>
+                    <div className={styles.icon}><a href="https://github.com/joshua-legend"><FontAwesomeIcon icon={faGithub} /></a></div>
+                    <div className={styles.icon}><a href="https://www.youtube.com/watch?v=dXpwL7cXcc8"><FontAwesomeIcon icon={faYoutube} /></a></div>
+                    <div className={styles.icon}><a href="https://www.rocketpunch.com/@4d9a404a"><FontAwesomeIcon icon={faRocket} /></a></div>
+                    <div className={styles.icon}><a href="mailto:iuttn123@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a></div>
                 </div>
-                <div className={styles.article}><h1 className={styles.title}><Link to='/' onClick={closeMenu}>Home</Link></h1><p className={styles.description}>back to home page</p></div>
-                <div className={styles.article}><h1 className={styles.title}><Link to='/portfolios' onClick={closeMenu}>Portfolios</Link></h1><p className={styles.description}>What portfolios do you have?</p></div>
-                <div className={styles.article}><h1 className={styles.title}><Link to='/game' onClick={closeMenu}>Game</Link></h1><p className={styles.description}>Wanna play games?</p></div>
-                {/*<div className={styles.article}><h1 className={styles.title}>Game</h1><p className={styles.description}>Let's play some games!</p></div>*/}
+                <div className={styles.article} onClick={props.changeMenu}><h1 className={styles.title}><Link to='/' onClick={closeMenu}>Home</Link></h1><p className={styles.description}>back to home page</p></div>
+                <div className={styles.article} onClick={props.changeMenu}><h1 className={styles.title}><Link to='/portfolios' onClick={closeMenu}>Portfolios</Link></h1><p className={styles.description}>What portfolios do you have?</p></div>
+                <div className={styles.article} onClick={props.changeMenu}><h1 className={styles.title}><Link to='/game' onClick={closeMenu}>Game</Link></h1><p className={styles.description}>Wanna play games?</p></div>
             </div>
         </div>
     );
