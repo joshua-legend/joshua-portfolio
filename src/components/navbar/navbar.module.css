@@ -3,18 +3,22 @@
 @value makerBlue from '../../common/colors.css';
 
 *{box-sizing: border-box}
-.navbar{position:fixed;top:30px;left:0;height:100px;width:100%;display:flex;align-items:center;padding:4.5rem;justify-content:space-between;font:20px "Poiret one";font-weight: bolder;z-index: 3;}
+.navbar{position:absolute;top:0;left:0;height:1rem;width:100%;display:flex;align-items:center;padding:4.5rem;justify-content:space-between;font:20px "Poiret one";font-weight: bolder;z-index: 3;}
 .menu{display: flex;flex-direction: row;align-items: center;}
 .cube{width:50%;}
-.font{font-size: x-large; width: 50%; cursor: pointer}
+.font{font-size: x-large; width: 50%; cursor: pointer;animation: bounce 10s infinite;}
 .menu:hover .font{transition: letter-spacing 1s linear;letter-spacing: 2px;}
 .menu:hover .cube_color{transition: transform 1s linear;transform: translateX(-38%);}
 .logo{display: flex; font-size: 20px;}
-
-.navigation{
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    background-color: royalblue;
-    z-index: 1000;
+.navigation{display: none;height: 100vh;width: 100vw;background-color: royalblue;z-index: 1000;}
+@keyframes fade { 0%{opacity: 0;}  50%{opacity: 1;} 100%{opacity: 0;} }
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px)scale(1.1);}
+    60% {transform: translateY(30px)scale(1.1);}
 }
+
+@media screen and (max-width:768px) {
+    .navbar{display: flex;align-items: center;padding: 1.75rem;font: 20px "Poiret one";font-weight: bolder;z-index: 3;position: relative;margin-bottom: 3rem;}
+}
+

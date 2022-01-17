@@ -11,26 +11,12 @@
 .scroll .text{letter-spacing: 10px;margin-bottom: 3rem; animation: bounce 3s ease-in-out 3;}
 .scroll .line{border-left: 1px solid silver;height: 100%;}
 
-/*@keyframes move {*/
-/*    0%{transform: translateX(0%)}*/
-/*    100%{transform: translateX(-100%)}*/
-/*}*/
+@media screen and (max-width:768px) {
+    .scroll{display: none;}
+}
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
     40% {transform: translateY(-30px);}
     60% {transform: translateY(-15px);}
-}
-
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100%;}
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #95afc0; }
-    100% {border-right: none;}
 }

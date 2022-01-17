@@ -10,3 +10,9 @@ a{color: inherit;}
 .title{flex:2;font-size: xxx-large;font-weight: bolder;color: gray;font-family: 'Oswald', sans-serif;cursor: pointer}
 .title:hover{transition: all 0.2s linear; color: #ff8282;}
 .description{flex:4;font-size: larger;color: gray;}
+
+@media screen and (max-width:768px) {
+    .line{display: none;}
+    .icons{justify-content: space-between}
+    .article{flex-direction: column;height: 30%;}
+}

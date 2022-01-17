@@ -40,11 +40,11 @@ const History = () => {
         <section className={styles.container}>
             <h1 className={styles.h1}>Programmer's History</h1>
             <div className={styles.wrap}>
-                {history.map(obj=>(
-                    <article className={styles.article} onClick={()=>onTag(obj.a_tag)}>
+                {history.map((obj,idx)=>(
+                    <article key={idx} className={styles.article} onClick={()=>onTag(obj.a_tag)}>
                         <div className={styles.inner}>
                             <div className={styles.txt}>
-                                <h2>{obj.title}</h2>
+                                <h2 className={styles.title}>{obj.title}</h2>
                                 <p >{(obj.p)}</p>
                             </div>
                             <figure>

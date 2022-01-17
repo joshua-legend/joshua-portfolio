@@ -6,7 +6,7 @@
 
 *{text-decoration: none;}
 
-.major{display: flex;flex-direction: row;height: 700px;align-items: center;justify-content: center;font-family: 'Overpass', sans-serif;padding:5px;margin-top: 100px;}
+.major{display: flex;flex-direction: row;height: 30rem;align-items: center;justify-content: center;font-family: 'Overpass', sans-serif;padding:5px;margin-top: 100px;}
 .introduce{width: 30%;display: flex;margin: 5px;flex-direction: column;animation: 3s linear 0s infinite alternate move;}
 .h1{font-size: 3.5rem;white-space: pre-wrap;}
 .hr{border: solid 2px #95afc0;width: 20%;margin: 20px 0 10px;}
@@ -14,8 +14,7 @@
 .p{white-space: pre-wrap;flex:2;font: 32px/1.4 'Dongle', sans-serif;}
 
 .card{width: 18%;padding: 30px;background-color: white;box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: 10px;margin: 0 3rem;transition: all 0.4s ease-in-out;}
-.card:hover{transform:scale(1.1);
-}
+.card:hover{transform:scale(1.1);}
 .menu{width: 100%;}
 .menu::after{content: "";display: block;clear: both;}
 .menu a{font-size: 20px;color:#666;}
@@ -30,3 +29,13 @@
 .contact li{width: 100%;padding: 10px 0px; border-bottom: 1px solid #eee; text-align: center;}
 .contact li:last-child{border-bottom: none;}
 .contact li *{color: #555;font-size: 15px;text-shadow: 2px 2px 2px #ddd;}
+
+@keyframes typing { from { width: 0 } to { width: 100%;}}
+@keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: #95afc0; } 100% {border-right: none;}}
+
+@media screen and (max-width:768px) {
+    .major{flex-direction: column;height: auto;margin:auto;}
+    .introduce{width: 90%;}
+    .h1{text-align: center;}
+    .card{width: auto; margin-top: 1rem;}
+}

@@ -27,7 +27,6 @@ const Gamefield = (props:Iprops) => {
         (kKey.current as HTMLDivElement).style.backgroundColor = 'transparent';
         (lKey.current as HTMLDivElement).style.backgroundColor = 'transparent';
         press = false;
-        console.log(press);
     })
     document.addEventListener('keydown', ev => {
             if (ev.key === "a" || ev.key === "A") {
@@ -141,6 +140,9 @@ const Gamefield = (props:Iprops) => {
         }
 
         frame();
+        return () => {
+            cr.stop();
+        }
     }, [aKey]);
 
     return (

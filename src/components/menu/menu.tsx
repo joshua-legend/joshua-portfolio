@@ -26,7 +26,7 @@ const Menu = (props:Iprops) => {
 
     return (
         <div className={styles.menu} ref={myRef}>
-            <Navbar isOpenMenu={props.isOpenMenu} changeMenu={props.changeMenu} />
+            <Navbar isOpenMenu={props.isOpenMenu} changeMenu={props.changeMenu}  />
             <div className={styles.selectArea}>
                 <div className={styles.icons}>
                     <div className={styles.line}></div>

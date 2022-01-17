@@ -1,6 +1,5 @@
 import React, {MouseEventHandler} from 'react';
 import styles from './intro.module.css'
-// import {AiOutlineStar} from "react-icons/all";
 
 interface Iprops {
     id:string,
@@ -33,7 +32,6 @@ const Intro = (props:Iprops) => {
                       <img src={props.img} alt=""/>
                       <h1>{props.info.name}</h1>
                       <h2>{props.info.sub}</h2>
-                      <a className={styles.btnView} href="#">View More</a>
                   </article>
                   <ul className={styles.contact}>
                       <li>

@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import Pagewrap from "./components/pagewrap/pagewrap";
 import Menu from "./components/menu/menu";
@@ -11,14 +11,19 @@ function App() {
         {id: 4, position: `Game`, themeColor: `#fff8e1`,menuColor:`#ffe082`},
     ]);
     const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const [click, setClick] = useState(false);
     const changeMenu:(event: React.MouseEvent<HTMLElement>) => void = () =>{setIsOpenMenu(!isOpenMenu);}
+
+    useEffect(() => {
+        if(isOpenMenu) setClick(true);
+    }, []);
 
 
     return (
-    <div className="App" >
-        {!isOpenMenu &&<Pagewrap isOpenMenu={isOpenMenu} changeMenu={changeMenu} />}
-        {isOpenMenu && <Menu isOpenMenu={isOpenMenu} changeMenu={changeMenu}/>}
-    </div>
+        <div className="App" >
+            {!isOpenMenu &&<Pagewrap isOpenMenu={isOpenMenu} changeMenu={changeMenu} />}
+            {isOpenMenu && <Menu isOpenMenu={isOpenMenu} changeMenu={changeMenu}/>}
+        </div>
     );
 }
 
