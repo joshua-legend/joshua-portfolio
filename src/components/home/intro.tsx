@@ -32,6 +32,7 @@ const Intro = (props:Iprops) => {
                       <img src={props.img} alt=""/>
                       <h1>{props.info.name}</h1>
                       <h2>{props.info.sub}</h2>
+                      <a className={styles.btnView}>전수효 93년생 남</a>
                   </article>
                   <ul className={styles.contact}>
                       <li>
